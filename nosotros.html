@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nelson A Cantero">
+    <title>Sobre adoptAR</title>
+    <link rel="stylesheet" href="./css/styles2.css">
+    <link rel="stylesheet" href="./css/index.css">    
+    <link rel="stylesheet" href="./mapa/leaflet.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <img src="./img/idealCausa.png" alt="objetivo"> adoptAR</a>
+    
+        <input type="checkbox" id="toggler" />
+        <label for="toggler"><i class="fa-sharp fa-solid fa-bars"></i></label>
+      
+        <nav class="navbar">
+            <a class="active" href="./index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a>
+            <a  href="./razas.html"><i class="fa-solid fa-paw"></i>Razas</a>
+            <a href="./panelAdopcion.html"><i class="fa-solid fa-people-roof"></i>Panel de adopción</a>
+            <a href="./nosotros.html"><i class="fa-regular fa-circle-question"></i>Nosotros</a>
+          </nav>
+      </header>
+
+    <section class="about" id="about">
+        <h2 class="heading">
+            Sobre   <span>Nosotros</span>
+        </h2>
+
+        <div class="about-img">
+            <img src="./img/logo.png" alt="">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="about-content">
+
+            <h3>Este es un sitio web para la difusión de fotos de mascotas (perros
+                y gatos) disponibles para adopción y que actualmente se encuentran en Buenos Aires en
+                posesión de:<br>
+                <li>Refugios de animales</li> 
+                <li>Grupos de rescate de mascotas</li>
+                <li>Agencias de adopción</li> 
+            <h3>
+            <p> El objetivo principal de este portal web es conectar
+                humanos con mascotas y servir como una alternativa viable a los refugios tradicionales,
+                brindándole un espacio donde dichas organizaciones benéficas puedan difundir las
+                mascotas a su resguardo y darle así la oportunidad a una mascota sin hogar de ser
+                adoptada por una familia.</p>
+        </div>
+            <div id="mapa"></div>
+
+            
+    </section>
+    
+<script src="./mapa/leaflet.js"></script>
+<script>
+    var map = L.map('mapa').setView([-34.9226880234625, -57.95599801060181], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+    }).addTo(map);
+
+    L.marker([-34.9226880234625, -57.95599801060181]).addTo(map)
+    .bindPopup('Encontranos acá')
+    .openPopup();
+</script> 
+    
+<!-- Footer -->
+
+<div class="footer">
+    <h2>&copy; 2023 UNAJ</h2>
+  </div>
+
+</body>
+</html> 

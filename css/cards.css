@@ -9,6 +9,8 @@
   }
   .razasContainer h2{
     width: 85%;
+    justify-content:center;
+    text-align:center;
   }
   
   .razasContainer .card {

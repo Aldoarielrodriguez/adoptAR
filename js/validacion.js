@@ -62,7 +62,9 @@ var formulario=
 
   sendMail:function(name,email,tel,msj){
     var msj =msj + "\n Emisor: "+name+"\n Correo electrónico :"+email+"\n Tel:"+tel;
-    $(location).attr('href', "aldoarielro@gmail.com?subject=Solicitud de adopcion"+ "&body=" + encodeURIComponent(msj));
+    var msjSpc= msj.replace(" ", "%20");
+    $(".adoptar").attr('href', "aldoarielro@gmail.com?subject=Solicitud%20de%20adopcion"+ "&body=" + encodeURIComponent(msjSpc));
+  
   },
 
   validarFormulario:function(email,name,number){

@@ -174,7 +174,7 @@
       right: 10%;
     }
     .especie .especieContent .razasContainer .card .cardContent a {
-      height: 35%;
+      height: 30%;
     }
   }
   @media screen and (max-width: 480px) {
@@ -190,6 +190,6 @@
       right: 5%;
     }
     .especie .especieContent .razasContainer .card .cardContent a {
-      height: 35%;
+      height: 30%;
     }
   }

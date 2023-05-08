@@ -1,0 +1,258 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+
+
+html {
+    background-color: var(--bg-color);
+
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #081b29;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+ 
+
+
+
+
+
+.contact {
+    min-height: auto;
+    width: 60%;
+    transform: translateY(-5%);
+}
+
+.contact form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 100%;
+    padding: 1%;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    /*padding: 1.5rem;*/
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--second-bg-color) ;
+    padding: 0% 5% 0% 5%;
+}
+
+.heading {
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-img {
+    position: relative;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    background: var(--text-color);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    border-top: .2rem solid var(--second-bg-color);
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;  
+}
+
+.about-content p {
+    font-size: 1.4rem;
+    margin: 2rem 0 3rem;
+}
+
+.about-content li{
+    color: var(--main-color);
+}
+
+.info{
+    width: 40%;
+    padding: 0.5rem 1rem;
+}
+
+
+
+.info {
+    align-content: center;
+    background: var(--second-bg-color) ;
+}
+
+
+
+
+#mapa {
+    width: 70%;
+    height: 20rem;
+    border-radius: 1rem;
+    border: var(--main-color) solid 0.4rem;
+}
+
+@media screen and (max-width: 1200px) {
+    /* estilos para pantallas de menos de 1200px de ancho */
+    #mapa {
+        width:85%;
+        border-radius: 0.8rem;
+        border: var(--main-color) solid 0.3rem;
+    }
+    .contact form .input-box .input-field input,
+    .contact form .textarea-field textarea {
+    font-size: 1.3rem;
+}
+.heading {
+    font-size: 2.6rem;
+}
+.about-content h3 {
+    font-size: 1.3rem;  
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem;
+}
+.contact {
+    width: 70%;
+}
+
+}
+@media screen and (max-width: 768px) {
+    /* estilos para pantallas de menos de 768px de ancho */
+    #mapa {
+        height: 180px;
+        width: 93%;
+        border-radius: 0.5rem;
+        border: var(--main-color) solid 0.2rem;
+    }
+    .contact form .input-box .input-field input,
+    .contact form .textarea-field textarea {
+    font-size: 1rem;
+}
+.heading {
+    font-size: 2.3rem;
+}
+.about-content h3 {
+    font-size: 1rem;  
+}
+
+.about-content p {
+    font-size: 0.9rem;
+    margin: 1rem 0 1rem;
+}
+.contact {
+    width: 80%;
+}
+}
+@media screen and (max-width: 480px) {
+    /* estilos para pantallas de menos de 480px de ancho */
+    #mapa {
+        width: 98%;
+        border-radius: 0.5rem;
+        border: var(--main-color) solid 0.1rem;
+    }
+    .contact form .input-box .input-field input,
+    .contact form .textarea-field textarea {
+    font-size: 0.7rem;
+}
+.heading {
+    font-size: 2rem;
+}
+.about-content h3 {
+    font-size: 0.7rem;  
+}
+
+.about-content p {
+    font-size: 0.6rem;
+    margin: 1rem 0 1rem;
+}
+.contact {
+    width: 95%;
+}
+
+
+}

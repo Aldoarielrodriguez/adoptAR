@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins",sans-serif;
+}
+body {
+    display : flex;
+    align-items :center;
+    justify-content : center;
+    height: 100%;
+    flex-direction: column;
+
+    background:#081b29;
+    color: #ededed;
+  }
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 15px;
+
+    height: 10%;
+    width: 100%;
+    position: relative;
+    top:0;
+    left:0;
+    
+
+    padding: 20px 5% 20px 5%;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 600;
+    max-width: 180px;
+  }
+  
+  .logo img{
+    min-width: 35px;
+      width: 25%;
+      height: auto; 
+  }
+
+#toggler,.header label {
+    display: none;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+  
+.navbar a {
+    font-size: 1.5rem;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+  }
+  
+.navbar a:hover, 
+.navbar a.active{
+    color: #00abf0;
+  }
+
+/*###########################################*/
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    min-height: 90%;
+    width: 90%;
+}
+
+.homeContent{
+    height: 30%;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 0 0 0;
+  }
+
+.homeIntro{
+    height: 30%;
+    width: 85%;
+}
+
+.homeIntro h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.homeIntro h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.homeIntro p {
+    font-size: 1.2rem;
+    margin: 20px 0 40px;
+}
+
+
+.idealContainer{
+    height: auto;
+    width: 15%;
+}
+
+.idealContainer img{
+    width: 100%;
+    height: auto; 
+}
+
+.especieContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50vh;
+}
+
+.split{
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    filter: brightness(0.95);
+    
+}
+
+
+.split h1 {
+    font-size: 4rem;
+    text-shadow: 0.1em 0.1em 0.2em #00abf0;
+    left:50%;
+    top:20%;
+    white-space: nowrap;
+    color:#fff;
+  }
+
+  .split.right {
+    right: 0;
+    background: url("../img/perro-tierno.jpg") center center no-repeat;
+    background-size: cover;
+    filter: brightness(90%);
+  }
+
+  .split.left {
+    left: 0;
+    background: url("../img/gato-tierno.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  .split.left .especieButton:hover,.split.right .especieButton:hover{
+    background-color: #00abf0;
+    border-color: #fff;
+    color:#fff;
+    transition: 0.5s;
+    
+  }
+
+
+  .split.left, .split.right, .split.left:before, .split.right:before{
+    transition: 1000ms all ease-in-out;
+  }
+  
+  .hover-left .left{
+    width: 75%;   
+  }
+  
+  .hover-left .right{
+    width:25%;
+    filter: blur(4px) brightness(0.30);
+  }
+  
+  .hover-left .right:before{
+    z-index: 2;
+  }
+  
+  .hover-right .right{
+    width: 75%;
+  }
+  
+  .hover-right .left {
+    width: 25%;
+    filter: blur(4px) brightness(0.30);
+  }
+  
+  .hover-right .left:before{
+    z-index:2;
+  }
+
+
+
+  .especieButton{
+    display:block;
+    position: absolute;
+    left:50%;
+    top:45%;
+    height: 5rem;
+    padding-top: 1rem;
+    width: 15rem;
+
+    text-align: center;
+    color:#00abf0;
+    border: #00abf0 solid 0.2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: #ededed 0.1em 0.1em 0.2em;
+
+    transform: translate(-50%);
+    animation: glow 1.5s linear infinite alternate;
+
+    backdrop-filter: blur(3px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  }
+  
+  @keyframes glow{
+    to {
+      box-shadow: 0px 0px 30px 20px #00abf0;
+    }
+  }
+  
+/*###########################################*/
+
+.footer{
+  flex-shrink: 0;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: auto;
+}
+
+
+@media screen and (max-width: 1200px) {
+  /* estilos para pantallas de menos de 1200px de ancho */
+
+  .navbar a {
+    font-size: 1rem;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+  }
+  .homeIntro h1 {
+   font-size: 2.5rem;
+   font-weight:400;
+   line-height: 1;
+ }
+ .homeIntro h3{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #00abf0;
+}
+.homeIntro p {
+  font-size: 0.8rem;
+  margin: 20px 0 40px;
+}
+.especieContainer{
+  width: 95%;
+  height: 45vh;
+}
+.split.left h1{
+  font-size: 2.5rem;
+}
+.split.right h1{
+  font-size: 2.5rem;
+}
+.split.left h1{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.split.right h1{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.especieButton{
+
+  left:50%;
+  top:45%;
+  height: 4rem;
+  padding-top: 0.6rem;
+  width: 12rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+ }
+ .split.left h1{
+  font-size: 3rem;
+}
+.split.right h1{
+  font-size: 3rem;
+}
+.logo{
+  font-size: 1.2rem;
+  color:#ededed;
+  text-decoration: none;
+  font-weight: 600;
+  max-width: 180px;
+}
+.navbar{
+  gap: 5px;
+}
+
+.navbar a {
+  font-size: 1.1rem;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 15px;
+}
+}
+
+ @media screen and (max-width: 768px) {
+  /* estilos para pantallas de menos de 768px de ancho */
+
+  .logo{
+    font-size: 1.1rem;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  .logo img{
+      width:9%;
+      height: auto; 
+  }
+  .home{
+    align-items: center;
+    height: 100%;
+    min-height: 100%;
+    width: 97%;
+  }
+  .homeIntro h1 {
+    font-size: 2rem;
+    font-weight:200;
+    line-height: 1;
+}
+.homeIntro h3{
+  font-size: 1rem;
+  font-weight: 200;
+  color: #00abf0;
+}
+.homeIntro p {
+  font-size: 0.7rem;
+  margin: 20px 0 40px;
+}
+.idealContainer{
+  display: none;
+}
+
+.especieContainer{
+  width: 95%;
+  height: 40vh;
+}
+.especieButton{
+  display:block;
+  position: absolute;
+  left:50%;
+  top:45%;
+  height: 3rem;
+  padding-top: 0.5rem;
+  width: 10rem;
+
+  text-align: center;
+  color:#fff;
+  border: #fff solid 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: #ededed 0.1em 0.1em 0.2em;
+  border-color: #fff;
+  transition: none;
+
+  transform: translate(-50%);
+  animation: glow 1.5s linear infinite alternate;
+
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(1px);
+  background-color: #00abf0;
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.navbar {
+  width: 0%;
+  height: 0%;
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  
+}
+.header label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+
+#toggler:checked ~ .navbar {
+  width: 100%;
+  min-height: 150px;
+  max-height: 100%;
+  height: 100%;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+  background: rgba( 0, 171, 240, 0.5 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+.footer h2{
+  font-size: 1rem;
+}
+.split.left h1{
+  font-size: 2rem;
+}
+.split.right h1{
+  font-size: 2rem;
+}
+.especieButton{
+  height: 1.9rem;
+  padding-top: 0.1rem;
+  width: 8rem;
+
+  text-align: center;
+  color:#fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: #ededed 0.1em 0.1em 0.2em;
+  border-color: #fff;
+  transition: none;
+
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(1px);
+  background-color: #00abf0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.split.left h1{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.split.right h1{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+
+}
+
+@media screen and (max-width: 480px) {
+  /* estilos para pantallas de menos de 480px de ancho */
+  .logo{
+    font-size: 0.9rem;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  .logo img{
+      width: 8%;
+      height: auto; 
+  }
+  .home{
+    display: block;
+    align-items: center;
+    flex-direction:row;
+    height: 100%;
+    min-height: 100%;
+    width: 99%;
+  }
+  .homeIntro h1 {
+    font-size: 2rem;
+    font-weight:100;
+    line-height: 0.7;
+  }
+  .homeIntro h3{
+    font-size: 1rem;
+    font-weight: 100;
+    color: #00abf0;
+  }
+  .homeIntro p {
+    font-size: 0.7rem;
+    margin: 10px 0 20px;
+  }
+  
+
+
+.especieButton{
+  height: 1.5rem;
+  padding-top: 0.2rem;
+  width: 5rem;
+
+  text-align: center;
+  color:#fff;
+  border: #fff solid 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-shadow: #ededed 0.1em 0.1em 0.2em;
+  border-color: #fff;
+  transition: none;
+
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(1px);
+  background-color: #00abf0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.split.left h1{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.split.right h1{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+}

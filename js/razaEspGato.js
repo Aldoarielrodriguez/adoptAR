@@ -1,10 +1,3 @@
-//DOGAPIKEY= live_IqF4EFXSRLtCR1FB3DVIxoNKQbb4sbGpuFlnqi72pth58BFacTPnLr6emNIfMmfn
-//CATAPIKEY= live_jxhoDZiNY4wEy8qPIufiaYnL1Gxen0WcVITpgp52B7GhLpJqwyTnRhsGcwX9bJNR
-
-//Use it as the 'x-api-key' header when making any request to the API, or by adding 
-//as a query string parameter e.g. 
-//'api_key=live_jxhoDZiNY4wEy8qPIufiaYnL1Gxen0WcVITpgp52B7GhLpJqwyTnRhsGcwX9bJNR'
-
 var raza=
 {
     onReady: function()

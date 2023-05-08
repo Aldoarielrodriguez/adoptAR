@@ -173,6 +173,9 @@
     .searchButton {
       right: 10%;
     }
+    .especie .especieContent .razasContainer a {
+      height: 35%;
+    }
   }
   @media screen and (max-width: 480px) {
     /* estilos para pantallas de menos de 480px de ancho */

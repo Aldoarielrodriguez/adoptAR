@@ -189,4 +189,7 @@
     .searchButton {
       right: 5%;
     }
+    .especie .especieContent .razasContainer a {
+      height: 35%;
+    }
   }

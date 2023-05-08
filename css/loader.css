@@ -1,0 +1,33 @@
+.loader {
+    z-index: 1000;
+    position:absolute;
+    width: 90%;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition-property: height;
+    transition-duration: 3s;
+}
+
+.loader i{
+    
+    animation: rotate 5s linear infinite,glow 1.5s linear infinite alternate;
+    border-top-color: #00abf0;
+    border-bottom-color: #fff;
+    color:#00abf0;
+    border-radius: 70%;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: scale(1) rotate(360deg);
+    }
+    50% {
+        transform: scale(.8) rotate(-360deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}

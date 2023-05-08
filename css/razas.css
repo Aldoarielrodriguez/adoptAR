@@ -173,7 +173,7 @@
     .searchButton {
       right: 10%;
     }
-    .card .cardContent a {
+    .especie .especieContent .razasContainer .card .cardContent a {
       height: 35%;
     }
   }
@@ -189,7 +189,7 @@
     .searchButton {
       right: 5%;
     }
-    .card .cardContent a {
+    .especie .especieContent .razasContainer .card .cardContent a {
       height: 35%;
     }
   }

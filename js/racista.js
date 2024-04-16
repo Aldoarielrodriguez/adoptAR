@@ -40,7 +40,7 @@ var racista=
         
         $.ajax(link).done(function (RespuestaApi2) {
 
-                console.log("SegundaPasada: "+RespuestaApi2);
+                
 
                 divHtml.append(
                     `<div class="card dog" id=`+idRaza+`> \
@@ -71,7 +71,7 @@ var racista=
                 { 
                   if(index>=base && index<limite)
                   { 
-                    console.log("PrimerPasada: "+RespuestaApi)
+                    
                     var refImgCDN = value.reference_image_id;
                     var idRaza = value.name.replace(/ /g,"_");
                     

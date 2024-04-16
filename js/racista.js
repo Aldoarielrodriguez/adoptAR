@@ -31,6 +31,32 @@ var racista=
   
     },
 
+    renderPerrosCdn: function(divHtml,refImgCDN,idRaza,value){
+        var link = {
+            "url":"https://api.thedogapi.com/v1/images/"+refImgCDN,
+            "method": "GET",
+            "timeout": 0,
+          };
+        
+        $.ajax(link).done(function (RespuestaApi2) {
+
+                console.log("SegundaPasada: "+RespuestaApi2);
+
+                divHtml.append(
+                    `<div class="card dog" id=`+idRaza+`> \
+                        <div class="cardImage" > \
+                            <img src="`+RespuestaApi2.url+`" style="width:260px;height:240px;object-fit:cover" alt="mascota" >\
+                        </div> \
+                        <div class="cardContent"> \
+                            <h3>${value.name}</h3>\
+                            <a href="./razaPerro.html?${value.id}">Ver raza <i class="fa-solid fa-dog"></i> </a>  \
+                        </div> \
+                    </div>`);
+
+            })
+        
+    },
+
     paginadorPerros: function(base,limite,link,divHtml){
         racista.loader();
         var link = {
@@ -45,18 +71,21 @@ var racista=
                 { 
                   if(index>=base && index<limite)
                   { 
-                    var strImageSrc="https://api.thedogapi.com/v1/images/"
+                    console.log("PrimerPasada: "+RespuestaApi)
+                    var refImgCDN = value.reference_image_id;
                     var idRaza = value.name.replace(/ /g,"_");
-                    divHtml.append(
-                        `<div class="card dog" id=`+idRaza+`> \
-                            <div class="cardImage" > \
-                                <img src="strImageSrc+${value.reference_image_id}" style="width:260px;height:240px;object-fit:cover" alt="mascota" >\
-                            </div> \
-                            <div class="cardContent"> \
-                                <h3>${value.name}</h3>\
-                                <a href="./razaPerro.html?${value.id}">Ver raza <i class="fa-solid fa-dog"></i> </a>  \
-                            </div> \
-                        </div>`);
+                    
+                    racista.renderPerrosCdn(divHtml,refImgCDN,idRaza,value)
+                    // divHtml.append(
+                    //     `<div class="card dog" id=`+idRaza+`> \
+                    //         <div class="cardImage" > \
+                    //             <img src="`+"#"+`" style="width:260px;height:240px;object-fit:cover" alt="mascota" >\
+                    //         </div> \
+                    //         <div class="cardContent"> \
+                    //             <h3>${value.name}</h3>\
+                    //             <a href="./razaPerro.html?${value.id}">Ver raza <i class="fa-solid fa-dog"></i> </a>  \
+                    //         </div> \
+                    //     </div>`);
                   }
                 });
         })
@@ -175,6 +204,9 @@ filtraRazaGatos: function(){
     
     
 };
+
+
+$('document').ready(racista.onReady);
 
 
 $('document').ready(racista.onReady);

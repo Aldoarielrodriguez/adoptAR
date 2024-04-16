@@ -49,7 +49,7 @@ var racista=
                     divHtml.append(
                         `<div class="card dog" id=`+idRaza+`> \
                             <div class="cardImage" > \
-                                <img src="${value.image.url}"style="width:260px;height:240px;object-fit:cover" alt="mascota" >\
+                                <img src="${value.image.url}" style="width:260px;height:240px;object-fit:cover" alt="mascota" >\
                             </div> \
                             <div class="cardContent"> \
                                 <h3>${value.name}</h3>\
